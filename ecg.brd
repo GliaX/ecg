@@ -22,11 +22,11 @@
 <layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="yes" active="yes"/>
 <layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
@@ -111,6 +111,16 @@
 <wire x1="100" y1="80" x2="0" y2="80" width="0" layer="20"/>
 <wire x1="0" y1="80" x2="0" y2="0" width="0" layer="20"/>
 <dimension x1="-3.9" y1="0" x2="-10.9" y2="55" x3="-6.3" y3="27.5" textsize="1.778" layer="51" dtype="vertical"/>
+<text x="13.75" y="75.4" size="1.27" layer="21" font="vector">GND  5V     SWDIO SCL  TX
+3.3V  BOOT0  SWCLK SDA RX</text>
+<text x="80.2" y="74.4" size="1.27" layer="21" font="vector">+5V</text>
+<text x="81" y="77.05" size="1.27" layer="21" font="vector">GND</text>
+<text x="81" y="71.85" size="1.27" layer="21" font="vector">TX</text>
+<text x="80.6" y="69.4" size="1.27" layer="21" font="vector">CLK</text>
+<text x="48.95" y="75.3" size="0.8128" layer="21" font="vector">&gt;U$47</text>
+<text x="29.75" y="71.3" size="0.8128" layer="21" font="vector">U$46</text>
+<text x="55.85" y="62.65" size="0.8128" layer="21" font="vector">U$51</text>
+<text x="56.7" y="65.45" size="0.8128" layer="21" font="vector" rot="R90">U$52</text>
 </plain>
 <libraries>
 <library name="ecgparts">
@@ -1817,7 +1827,7 @@ design rules under a new name.</description>
 <param name="mlMaxStopFrame" value="4mil"/>
 <param name="mlMinCreamFrame" value="0mil"/>
 <param name="mlMaxCreamFrame" value="0mil"/>
-<param name="mlViaStopLimit" value="0mil"/>
+<param name="mlViaStopLimit" value="30mil"/>
 <param name="srRoundness" value="0"/>
 <param name="srMinRoundness" value="0mil"/>
 <param name="srMaxRoundness" value="0mil"/>
@@ -1926,220 +1936,748 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="U$1" library="ecgparts" package="SO-8" value="INA826" x="19.32" y="39.85" rot="R90"/>
-<element name="U$2" library="ecgparts" package="SO-8" value="INA826" x="25.035" y="39.85" rot="R90"/>
-<element name="U$3" library="ecgparts" package="SO-8" value="INA826" x="30.75" y="39.85" rot="R90"/>
-<element name="U$4" library="ecgparts" package="SO-8" value="INA826" x="36.465" y="39.85" rot="R90"/>
-<element name="U$9" library="ecgparts" package="TSSOP-14" value="OPA4171" x="26.91" y="56.5"/>
-<element name="U$11" library="ecgparts" package="SSOP-28" value="MCP3903" x="26.96" y="66.06" rot="R90"/>
-<element name="C1" library="rcl" package="C0603K" value="9.4n" x="17.765" y="49.58" rot="R90"/>
-<element name="C2" library="rcl" package="C0603K" value="9.4n" x="23.965" y="49" rot="R90"/>
-<element name="C3" library="rcl" package="C0603K" value="9.4n" x="29.215" y="48.97" rot="R90"/>
-<element name="C4" library="rcl" package="C0603K" value="9.4n" x="35.615" y="49.14" rot="R90"/>
-<element name="C13" library="rcl" package="C0603K" value="4.7n" x="33.52" y="53.015"/>
-<element name="C14" library="rcl" package="C0603K" value="4.7n" x="31.86" y="51.685" rot="R180"/>
-<element name="C15" library="rcl" package="C0603K" value="4.7n" x="21.96" y="53.115"/>
-<element name="C16" library="rcl" package="C0603K" value="4.7n" x="20.57" y="51.735" rot="R180"/>
-<element name="R1" library="rcl" package="R0603" value="15k" x="19.595" y="49.43" rot="R90"/>
-<element name="R2" library="rcl" package="R0603" value="15k" x="22.495" y="49" rot="R90"/>
-<element name="R3" library="rcl" package="R0603" value="15k" x="30.995" y="49.07" rot="R90"/>
-<element name="R4" library="rcl" package="R0603" value="15k" x="33.895" y="49.39" rot="R90"/>
-<element name="R5" library="rcl" package="R0603" value="15k" x="18.745" y="46.21" rot="R90"/>
-<element name="R6" library="rcl" package="R0603" value="15k" x="24.095" y="45.88" rot="R90"/>
-<element name="R7" library="rcl" package="R0603" value="15k" x="29.895" y="45.85" rot="R90"/>
-<element name="R8" library="rcl" package="R0603" value="15k" x="35.245" y="45.97" rot="R90"/>
-<element name="U$5" library="ecgparts" package="SO-8" value="INA826" x="42.18" y="39.85" rot="R90"/>
-<element name="U$6" library="ecgparts" package="SO-8" value="INA826" x="47.895" y="39.85" rot="R90"/>
-<element name="U$7" library="ecgparts" package="SO-8" value="INA826" x="53.61" y="39.85" rot="R90"/>
-<element name="U$8" library="ecgparts" package="SO-8" value="INA826" x="59.325" y="39.85" rot="R90"/>
-<element name="U$10" library="ecgparts" package="TSSOP-14" value="OPA4171" x="49.54" y="58.05"/>
-<element name="C5" library="rcl" package="C0603K" value="9.4n" x="40.865" y="49.91" rot="R90"/>
-<element name="C6" library="rcl" package="C0603K" value="9.4n" x="47.615" y="49.43" rot="R90"/>
-<element name="C7" library="rcl" package="C0603K" value="9.4n" x="51.715" y="48.9" rot="R90"/>
-<element name="C8" library="rcl" package="C0603K" value="9.4n" x="59.315" y="49.72" rot="R90"/>
-<element name="C9" library="rcl" package="C0603K" value="4.7n" x="56.14" y="52.735"/>
-<element name="C10" library="rcl" package="C0603K" value="4.7n" x="54.49" y="51.215" rot="R180"/>
-<element name="C11" library="rcl" package="C0603K" value="4.7n" x="45.48" y="53.515"/>
-<element name="C12" library="rcl" package="C0603K" value="4.7n" x="43.7" y="52.235" rot="R180"/>
-<element name="R9" library="rcl" package="R0603" value="15k" x="42.845" y="49.94" rot="R90"/>
-<element name="R10" library="rcl" package="R0603" value="15k" x="46.055" y="49.43" rot="R90"/>
-<element name="R11" library="rcl" package="R0603" value="15k" x="53.455" y="48.85" rot="R90"/>
-<element name="R12" library="rcl" package="R0603" value="15k" x="57.455" y="49.27" rot="R90"/>
-<element name="R13" library="rcl" package="R0603" value="15k" x="41.205" y="46.69" rot="R90"/>
-<element name="R14" library="rcl" package="R0603" value="15k" x="47.375" y="46.26" rot="R90"/>
-<element name="R15" library="rcl" package="R0603" value="15k" x="52.975" y="45.58" rot="R90"/>
-<element name="R16" library="rcl" package="R0603" value="15k" x="58.625" y="46.2" rot="R90"/>
-<element name="U$12" library="ecgparts" package="SSOP-28" value="MCP3903" x="50.46" y="66.6" rot="R90"/>
-<element name="R17" library="rcl" package="R0603" value="499R" x="19.32" y="34.77" rot="R180"/>
-<element name="R18" library="rcl" package="R0603" value="499R" x="24.785" y="35.27" rot="R180"/>
-<element name="R19" library="rcl" package="R0603" value="499R" x="30.75" y="34.77" rot="R180"/>
-<element name="R20" library="rcl" package="R0603" value="499R" x="36.465" y="34.77" rot="R180"/>
-<element name="R21" library="rcl" package="R0603" value="499R" x="42.18" y="34.77" rot="R180"/>
-<element name="R22" library="rcl" package="R0603" value="499R" x="47.895" y="34.77" rot="R180"/>
-<element name="R23" library="rcl" package="R0603" value="499R" x="53.61" y="34.77" rot="R180"/>
-<element name="R24" library="rcl" package="R0603" value="499R" x="59.325" y="35.405" rot="R180"/>
-<element name="C24" library="rcl" package="C0603K" value="33p" x="21.86" y="19.56" rot="R180"/>
-<element name="R49" library="rcl" package="R0603" value="100k" x="19.3" y="32.7"/>
-<element name="R50" library="rcl" package="R0603" value="100k" x="16.25" y="34.8"/>
-<element name="R51" library="rcl" package="R0603" value="100k" x="22.9" y="32.7" rot="R90"/>
-<element name="R52" library="rcl" package="R0603" value="100k" x="24.95" y="32.7" rot="R90"/>
-<element name="R53" library="rcl" package="R2512" value="100k" x="16.95" y="14.85" rot="R90"/>
-<element name="GL1" library="led" package="LED5MM" value="GASLAMP" x="22.1" y="11.9"/>
-<element name="R54" library="varistor" package="CT/CN1812" value="GASDISCHARGE" x="21.8" y="16.95"/>
-<element name="U$13" library="ecgparts" package="SMA" value="SMAZ5V1" x="23" y="23.75" rot="R270"/>
-<element name="U$14" library="ecgparts" package="SMA" value="SMAZ5V1" x="16.75" y="23.75" rot="R90"/>
-<element name="R55" library="rcl" package="R2010" value="10k" x="19.9" y="23.8" rot="R90"/>
-<element name="C17" library="rcl" package="C0603K" value="33p" x="32.6" y="20" rot="R180"/>
-<element name="R25" library="rcl" package="R2512" value="100k" x="27.35" y="14.8" rot="R90"/>
-<element name="GL2" library="led" package="LED5MM" value="GASLAMP" x="32.8" y="12.5"/>
-<element name="R26" library="varistor" package="CT/CN1812" value="GASDISCHARGE" x="32.6" y="17.45"/>
-<element name="U$15" library="ecgparts" package="SMA" value="SMAZ5V1" x="33.75" y="23.9" rot="R270"/>
-<element name="U$16" library="ecgparts" package="SMA" value="SMAZ5V1" x="27.25" y="24" rot="R90"/>
-<element name="R27" library="rcl" package="R2010" value="10k" x="30.45" y="24.1" rot="R90"/>
-<element name="C18" library="rcl" package="C0603K" value="33p" x="43.35" y="21.35" rot="R180"/>
-<element name="R28" library="rcl" package="R2512" value="100k" x="38.25" y="15.15" rot="R90"/>
-<element name="GL3" library="led" package="LED5MM" value="GASLAMP" x="43.8" y="12.6"/>
-<element name="R29" library="varistor" package="CT/CN1812" value="GASDISCHARGE" x="43.45" y="18.75"/>
-<element name="U$17" library="ecgparts" package="SMA" value="SMAZ5V1" x="44.75" y="25.9" rot="R270"/>
-<element name="U$18" library="ecgparts" package="SMA" value="SMAZ5V1" x="38" y="25" rot="R90"/>
-<element name="R30" library="rcl" package="R2010" value="10k" x="41.35" y="25.95" rot="R90"/>
-<element name="C19" library="rcl" package="C0603K" value="33p" x="53.5" y="21.35" rot="R180"/>
-<element name="R31" library="rcl" package="R2512" value="100k" x="48.6" y="14.85" rot="R90"/>
-<element name="GL4" library="led" package="LED5MM" value="GASLAMP" x="54.05" y="12.75"/>
-<element name="R32" library="varistor" package="CT/CN1812" value="GASDISCHARGE" x="53.55" y="18.65"/>
-<element name="U$19" library="ecgparts" package="SMA" value="SMAZ5V1" x="54.8" y="26.15" rot="R270"/>
-<element name="U$20" library="ecgparts" package="SMA" value="SMAZ5V1" x="48.05" y="25.75" rot="R90"/>
-<element name="R33" library="rcl" package="R2010" value="10k" x="51.45" y="25.9" rot="R90"/>
-<element name="C20" library="rcl" package="C0603K" value="33p" x="63.95" y="20.8" rot="R180"/>
-<element name="R34" library="rcl" package="R2512" value="100k" x="58.95" y="14.75" rot="R90"/>
-<element name="GL5" library="led" package="LED5MM" value="GASLAMP" x="64.2" y="12.3"/>
-<element name="R35" library="varistor" package="CT/CN1812" value="GASDISCHARGE" x="64.05" y="18.2"/>
-<element name="U$21" library="ecgparts" package="SMA" value="SMAZ5V1" x="65.3" y="25.35" rot="R270"/>
-<element name="U$22" library="ecgparts" package="SMA" value="SMAZ5V1" x="58.4" y="25.3" rot="R90"/>
-<element name="R36" library="rcl" package="R2010" value="10k" x="61.55" y="25.1" rot="R90"/>
-<element name="C21" library="rcl" package="C0603K" value="33p" x="74.25" y="20.45" rot="R180"/>
-<element name="R37" library="rcl" package="R2512" value="100k" x="69.3" y="14.95" rot="R90"/>
-<element name="GL6" library="led" package="LED5MM" value="GASLAMP" x="74.7" y="12.1"/>
-<element name="R38" library="varistor" package="CT/CN1812" value="GASDISCHARGE" x="74.25" y="17.8"/>
-<element name="U$23" library="ecgparts" package="SMA" value="SMAZ5V1" x="74.8" y="24.7" rot="R270"/>
-<element name="U$24" library="ecgparts" package="SMA" value="SMAZ5V1" x="68.5" y="24.9" rot="R90"/>
-<element name="R39" library="rcl" package="R2010" value="10k" x="71.7" y="24.85" rot="R90"/>
-<element name="C22" library="rcl" package="C0603K" value="33p" x="85.25" y="19.75" rot="R180"/>
-<element name="R40" library="rcl" package="R2512" value="100k" x="79.8" y="15.25" rot="R90"/>
-<element name="GL7" library="led" package="LED5MM" value="GASLAMP" x="85.5" y="11.75"/>
-<element name="R41" library="varistor" package="CT/CN1812" value="GASDISCHARGE" x="85.15" y="17.15"/>
-<element name="U$25" library="ecgparts" package="SMA" value="SMAZ5V1" x="84.65" y="24.3" rot="R270"/>
-<element name="U$26" library="ecgparts" package="SMA" value="SMAZ5V1" x="78.05" y="24.5" rot="R90"/>
-<element name="R42" library="rcl" package="R2010" value="10k" x="81.3" y="24.5" rot="R90"/>
-<element name="C23" library="rcl" package="C0603K" value="33p" x="95.15" y="20.5" rot="R180"/>
-<element name="R43" library="rcl" package="R2512" value="100k" x="90.2" y="14.65" rot="R90"/>
-<element name="GL8" library="led" package="LED5MM" value="GASLAMP" x="96.35" y="12.6"/>
-<element name="R44" library="varistor" package="CT/CN1812" value="GASDISCHARGE" x="95.75" y="17.75"/>
-<element name="U$27" library="ecgparts" package="SMA" value="SMAZ5V1" x="95.75" y="26.1" rot="R270"/>
-<element name="U$28" library="ecgparts" package="SMA" value="SMAZ5V1" x="89.15" y="26.15" rot="R90"/>
-<element name="R45" library="rcl" package="R2010" value="10k" x="92.5" y="26" rot="R90"/>
-<element name="U$29" library="ecgparts" package="TSSOP-14" value="OPA4171" x="10.2" y="35.45" rot="R180"/>
-<element name="R46" library="rcl" package="R0603" value="10k" x="10.05" y="39.1" rot="R180"/>
-<element name="R47" library="rcl" package="R0603" value="390k" x="5.45" y="38.8" rot="R180"/>
-<element name="R48" library="rcl" package="R0603" value="390k" x="4.1" y="36.2" rot="R270"/>
-<element name="C25" library="rcl" package="C0603K" value="47p" x="5.5" y="40.45" rot="R180"/>
-<element name="R56" library="rcl" package="R2512" value="100k" x="5.85" y="15.1" rot="R90"/>
-<element name="GL9" library="led" package="LED5MM" value="GASLAMP" x="11.1" y="12.75"/>
-<element name="R57" library="varistor" package="CT/CN1812" value="GASDISCHARGE" x="10.85" y="18.1"/>
-<element name="U$30" library="ecgparts" package="SMA" value="SMAZ5V1" x="11.5" y="24.15" rot="R270"/>
-<element name="U$31" library="ecgparts" package="SMA" value="SMAZ5V1" x="4.85" y="24.4" rot="R90"/>
-<element name="R58" library="rcl" package="R2010" value="10k" x="8.15" y="24.25" rot="R90"/>
-<element name="C27" library="rcl" package="C0603K" value="9.4n" x="26.9" y="50.35" rot="R180"/>
-<element name="C28" library="rcl" package="C0603K" value="0.1u" x="26.9" y="51.8" rot="R180"/>
-<element name="C29" library="rcl" package="C0603K" value="9.4n" x="49.75" y="51.45" rot="R180"/>
-<element name="C30" library="rcl" package="C0603K" value="0.1u" x="7.95" y="30.1"/>
-<element name="C31" library="rcl" package="C0603K" value="9.4n" x="7.95" y="28.7"/>
-<element name="C32" library="rcl" package="C0603K" value="0.1u" x="49.75" y="52.75" rot="R180"/>
-<element name="R59" library="rcl" package="R0603" value="15k" x="15.35" y="43.85" rot="R270"/>
-<element name="R60" library="rcl" package="R0603" value="100k" x="9.5" y="31.8"/>
-<element name="R61" library="rcl" package="R0603" value="15k" x="6.3" y="31.8"/>
-<element name="C26" library="rcl" package="C0603K" value="33p" x="21.4" y="28.85" rot="R270"/>
-<element name="C33" library="rcl" package="C0603K" value="33p" x="27.35" y="32.1" rot="R270"/>
-<element name="C34" library="rcl" package="C0603K" value="33p" x="33.15" y="33.5" rot="R270"/>
-<element name="C35" library="rcl" package="C0603K" value="33p" x="38.75" y="32.45" rot="R270"/>
-<element name="C36" library="rcl" package="C0603K" value="33p" x="44.5" y="33.45" rot="R270"/>
-<element name="C37" library="rcl" package="C0603K" value="33p" x="50.15" y="33.55" rot="R270"/>
-<element name="C38" library="rcl" package="C0603K" value="33p" x="56" y="33.75" rot="R270"/>
-<element name="C39" library="rcl" package="C0603K" value="33p" x="61.6" y="34.35" rot="R270"/>
-<element name="R62" library="rcl" package="R0603" value="10M" x="25.65" y="28.6"/>
-<element name="R63" library="rcl" package="R0603" value="10M" x="30.7" y="32.1"/>
-<element name="R64" library="rcl" package="R0603" value="10M" x="36.4" y="31.7"/>
-<element name="R65" library="rcl" package="R0603" value="10M" x="42.15" y="32.1"/>
-<element name="R66" library="rcl" package="R0603" value="10M" x="47.8" y="32.5"/>
-<element name="R67" library="rcl" package="R0603" value="10M" x="53.5" y="32.5"/>
-<element name="R68" library="rcl" package="R0603" value="10M" x="59.35" y="33.25"/>
-<element name="R69" library="rcl" package="R0603" value="10M" x="18.9" y="28.55"/>
-<element name="U$32" library="ecgparts" package="LQFP48" value="STM32F030C8T6" x="13.1" y="67.15" rot="R90"/>
-<element name="U$33" library="ecgparts" package="SOIC16W" value="SI8420BD" x="65.95" y="73.25"/>
-<element name="U$34" library="ecgparts" package="SHIELDPAD" value="SHIELDPAD" x="6.35" y="5.85" rot="R90"/>
-<element name="U$35" library="ecgparts" package="SHIELDPAD" value="SHIELDPAD" x="16.9" y="5.8" rot="R90"/>
-<element name="U$36" library="ecgparts" package="SHIELDPAD" value="SHIELDPAD" x="27.55" y="5.65" rot="R90"/>
-<element name="U$37" library="ecgparts" package="SHIELDPAD" value="SHIELDPAD" x="37.75" y="5.75" rot="R90"/>
-<element name="U$38" library="ecgparts" package="SHIELDPAD" value="SHIELDPAD" x="48.15" y="5.7" rot="R90"/>
-<element name="U$39" library="ecgparts" package="SHIELDPAD" value="SHIELDPAD" x="58.85" y="5.65" rot="R90"/>
-<element name="U$40" library="ecgparts" package="SHIELDPAD" value="SHIELDPAD" x="68.95" y="5.75" rot="R90"/>
-<element name="U$41" library="ecgparts" package="SHIELDPAD" value="SHIELDPAD" x="79.7" y="5.8" rot="R90"/>
-<element name="U$42" library="ecgparts" package="SHIELDPAD" value="SHIELDPAD" x="90.2" y="5.7" rot="R90"/>
-<element name="C40" library="rcl" package="C0603K" value="33p" x="12.5" y="54.05"/>
-<element name="R70" library="rcl" package="R2512" value="100k" x="14.9" y="56.85"/>
-<element name="GL10" library="led" package="LED5MM" value="GASLAMP" x="3.95" y="46.75" rot="R180"/>
-<element name="R71" library="varistor" package="CT/CN1812" value="GASDISCHARGE" x="5.9" y="60.35" rot="R180"/>
-<element name="U$43" library="ecgparts" package="SMA" value="SMAZ5V1" x="12.55" y="43.9" rot="R270"/>
-<element name="U$44" library="ecgparts" package="SMA" value="SMAZ5V1" x="9.25" y="43.9" rot="R270"/>
-<element name="R72" library="rcl" package="R2010" value="10k" x="15.55" y="51.2" rot="R270"/>
-<element name="R73" library="rcl" package="R0603" value="10M" x="12.95" y="48.9" rot="R270"/>
-<element name="U$45" library="ecgparts" package="SHIELDPAD" value="SHIELDPAD" x="5.6" y="54.05"/>
-<element name="C41" library="rcl" package="C0603K" value="33p" x="17.15" y="46.2" rot="R90"/>
-<element name="U$46" library="ecgparts" package="PBRC-M" value="PBRC-M" x="26.95" y="72.5" rot="R180"/>
-<element name="U$47" library="ecgparts" package="PBRC-M" value="PBRC-M" x="50.5" y="73.45" rot="R180"/>
-<element name="U$48" library="ecgparts" package="CTX02-18714R" value="CTX02-18714R" x="67.1" y="56.75" rot="R180"/>
-<element name="U$49" library="ecgparts" package="SOT-323-3" value="BAT64WFILMY" x="60.5" y="57.5" rot="R180"/>
-<element name="U$50" library="ecgparts" package="QFN16" value="TPS55010" x="75.9" y="58.2" rot="R180"/>
-<element name="C42" library="rcl" package="C0603" value="" x="73.1" y="55.7" rot="R180"/>
-<element name="R74" library="rcl" package="R0603" value="" x="80.95" y="61.5" rot="R180"/>
-<element name="R75" library="rcl" package="R0603" value="" x="78.3" y="62.25" rot="R90"/>
-<element name="C43" library="rcl" package="C0603" value="" x="76.25" y="62.3" rot="R270"/>
-<element name="C44" library="rcl" package="C0603" value="" x="72.1" y="61.6" rot="R270"/>
-<element name="R76" library="rcl" package="R0603" value="" x="74.2" y="61.6" rot="R90"/>
-<element name="C45" library="rcl" package="C0603" value="" x="78.9" y="58.15" rot="R270"/>
-<element name="C46" library="rcl" package="C1206K" value="" x="82.95" y="58.45" rot="R90"/>
-<element name="C47" library="rcl" package="C0603" value="" x="61.25" y="55" rot="R180"/>
-<element name="C48" library="rcl" package="C1206K" value="" x="60.55" y="60.5"/>
-<element name="C49" library="rcl" package="C1206K" value="" x="69.1" y="63.1" rot="R90"/>
-<element name="C50" library="rcl" package="C0603" value="" x="67.75" y="66.65"/>
-<element name="C51" library="rcl" package="C0603" value="" x="21.15" y="61.15" rot="R90"/>
-<element name="C52" library="rcl" package="C0603" value="" x="22.95" y="72.6" rot="R270"/>
-<element name="C53" library="rcl" package="C0603" value="" x="44.75" y="61.55" rot="R90"/>
-<element name="C54" library="rcl" package="C0603" value="" x="46.45" y="73.15" rot="R270"/>
-<element name="C55" library="rcl" package="C0603" value="" x="14.65" y="60.35" rot="R180"/>
-<element name="C56" library="rcl" package="C0603" value="" x="7.4" y="63.4" rot="R180"/>
-<element name="C57" library="rcl" package="C0603" value="" x="19.85" y="70.95"/>
-<element name="C58" library="rcl" package="C0603" value="" x="11.15" y="60.25"/>
-<element name="U$51" library="ecgparts" package="TSOT23" value="CAT6219" x="60.3" y="63.45" rot="R180"/>
-<element name="U$52" library="ecgparts" package="TSOT23" value="CAT6219" x="58.35" y="67.15" rot="R180"/>
-<element name="C59" library="rcl" package="C0603" value="" x="63.6" y="63.9"/>
-<element name="C60" library="rcl" package="C0603" value="" x="61.55" y="66.15"/>
-<element name="C61" library="rcl" package="C0603" value="" x="59.05" y="70.3" rot="R90"/>
-<element name="C62" library="rcl" package="C0603" value="" x="56.6" y="70.35" rot="R90"/>
-<element name="SV1" library="con-lsta" package="FE05-2" value="" x="6.75" y="76.35" rot="R180">
+<element name="U$1" library="ecgparts" package="SO-8" value="INA826" x="19.32" y="39.85" smashed="yes" rot="R90">
+<attribute name="NAME" x="21.57" y="41.35" size="0.8128" layer="21" font="vector" rot="R180"/>
+</element>
+<element name="U$2" library="ecgparts" package="SO-8" value="INA826" x="25.035" y="39.85" smashed="yes" rot="R90">
+<attribute name="NAME" x="27.285" y="41.35" size="0.8128" layer="21" font="vector" rot="R180"/>
+</element>
+<element name="U$3" library="ecgparts" package="SO-8" value="INA826" x="30.75" y="39.85" smashed="yes" rot="R90">
+<attribute name="NAME" x="33" y="41.35" size="0.8128" layer="21" font="vector" rot="R180"/>
+</element>
+<element name="U$4" library="ecgparts" package="SO-8" value="INA826" x="36.465" y="39.85" smashed="yes" rot="R90">
+<attribute name="NAME" x="38.715" y="41.35" size="0.8128" layer="21" font="vector" rot="R180"/>
+</element>
+<element name="U$9" library="ecgparts" package="TSSOP-14" value="OPA4171" x="26.91" y="56.5" smashed="yes">
+<attribute name="NAME" x="28.46" y="54.25" size="0.8128" layer="21" font="vector" rot="R90"/>
+</element>
+<element name="U$11" library="ecgparts" package="SSOP-28" value="MCP3903" x="26.96" y="66.06" smashed="yes" rot="R90">
+<attribute name="NAME" x="31.16" y="66.96" size="0.8128" layer="21" font="vector" rot="R180"/>
+</element>
+<element name="C1" library="rcl" package="C0603K" value="9.4n" x="17.765" y="49.58" smashed="yes" rot="R90">
+<attribute name="NAME" x="18.365" y="51.38" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="19.415" y="48.78" size="1.016" layer="27" rot="R90"/>
+</element>
+<element name="C2" library="rcl" package="C0603K" value="9.4n" x="23.965" y="49" smashed="yes" rot="R90">
+<attribute name="NAME" x="24.315" y="50.55" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="25.615" y="48.2" size="1.016" layer="27" rot="R90"/>
+</element>
+<element name="C3" library="rcl" package="C0603K" value="9.4n" x="29.215" y="48.97" smashed="yes" rot="R90">
+<attribute name="NAME" x="28.565" y="48.17" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="30.865" y="48.17" size="1.016" layer="27" rot="R90"/>
+</element>
+<element name="C4" library="rcl" package="C0603K" value="9.4n" x="35.615" y="49.14" smashed="yes" rot="R90">
+<attribute name="NAME" x="37.215" y="48.49" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="37.265" y="48.34" size="1.016" layer="27" rot="R90"/>
+</element>
+<element name="C13" library="rcl" package="C0603K" value="4.7n" x="33.52" y="53.015" smashed="yes">
+<attribute name="NAME" x="32.72" y="53.665" size="0.8128" layer="25"/>
+<attribute name="VALUE" x="32.72" y="51.365" size="1.016" layer="27"/>
+</element>
+<element name="C14" library="rcl" package="C0603K" value="4.7n" x="31.86" y="51.685" smashed="yes" rot="R180">
+<attribute name="NAME" x="31.115" y="54.31" size="0.8128" layer="25" rot="R270"/>
+<attribute name="VALUE" x="32.66" y="53.335" size="1.016" layer="27" rot="R180"/>
+</element>
+<element name="C15" library="rcl" package="C0603K" value="4.7n" x="21.96" y="53.115" smashed="yes">
+<attribute name="NAME" x="21.635" y="54.11" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="21.16" y="51.465" size="1.016" layer="27"/>
+</element>
+<element name="C16" library="rcl" package="C0603K" value="4.7n" x="20.57" y="51.735" smashed="yes" rot="R180">
+<attribute name="NAME" x="19.465" y="54.97" size="0.8128" layer="25" rot="R270"/>
+<attribute name="VALUE" x="21.37" y="53.385" size="1.016" layer="27" rot="R180"/>
+</element>
+<element name="R1" library="rcl" package="R0603" value="15k" x="19.595" y="49.43" smashed="yes" rot="R90">
+<attribute name="NAME" x="21.41" y="48.595" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="21.5" y="48.795" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="R2" library="rcl" package="R0603" value="15k" x="22.495" y="49" smashed="yes" rot="R90">
+<attribute name="NAME" x="23.21" y="50.515" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="24.4" y="48.365" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="R3" library="rcl" package="R0603" value="15k" x="30.995" y="49.07" smashed="yes" rot="R90">
+<attribute name="NAME" x="31.81" y="46.035" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="32.9" y="48.435" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="R4" library="rcl" package="R0603" value="15k" x="33.895" y="49.39" smashed="yes" rot="R90">
+<attribute name="NAME" x="33.26" y="48.755" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="35.8" y="48.755" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="R5" library="rcl" package="R0603" value="15k" x="18.745" y="46.21" smashed="yes" rot="R90">
+<attribute name="NAME" x="19.525" y="44.46" size="0.8128" layer="25" rot="R180"/>
+<attribute name="VALUE" x="20.65" y="45.575" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="R6" library="rcl" package="R0603" value="15k" x="24.095" y="45.88" smashed="yes" rot="R90">
+<attribute name="NAME" x="25.91" y="45.195" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="26" y="45.245" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="R7" library="rcl" package="R0603" value="15k" x="29.895" y="45.85" smashed="yes" rot="R90">
+<attribute name="NAME" x="29.26" y="45.215" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="31.8" y="45.215" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="R8" library="rcl" package="R0603" value="15k" x="35.245" y="45.97" smashed="yes" rot="R90">
+<attribute name="NAME" x="34.61" y="45.335" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="37.15" y="45.335" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="U$5" library="ecgparts" package="SO-8" value="INA826" x="42.18" y="39.85" smashed="yes" rot="R90">
+<attribute name="NAME" x="44.43" y="41.35" size="0.8128" layer="21" font="vector" rot="R180"/>
+</element>
+<element name="U$6" library="ecgparts" package="SO-8" value="INA826" x="47.895" y="39.85" smashed="yes" rot="R90">
+<attribute name="NAME" x="50.145" y="41.35" size="0.8128" layer="21" font="vector" rot="R180"/>
+</element>
+<element name="U$7" library="ecgparts" package="SO-8" value="INA826" x="53.61" y="39.85" smashed="yes" rot="R90">
+<attribute name="NAME" x="55.86" y="41.35" size="0.8128" layer="21" font="vector" rot="R180"/>
+</element>
+<element name="U$8" library="ecgparts" package="SO-8" value="INA826" x="59.325" y="39.85" smashed="yes" rot="R90">
+<attribute name="NAME" x="61.575" y="41.35" size="0.8128" layer="21" font="vector" rot="R180"/>
+</element>
+<element name="U$10" library="ecgparts" package="TSSOP-14" value="OPA4171" x="49.54" y="58.05" smashed="yes">
+<attribute name="NAME" x="51.09" y="55.8" size="0.8128" layer="21" font="vector" rot="R90"/>
+</element>
+<element name="C5" library="rcl" package="C0603K" value="9.4n" x="40.865" y="49.91" smashed="yes" rot="R90">
+<attribute name="NAME" x="40.215" y="49.11" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="42.515" y="49.11" size="1.016" layer="27" rot="R90"/>
+</element>
+<element name="C6" library="rcl" package="C0603K" value="9.4n" x="47.615" y="49.43" smashed="yes" rot="R90">
+<attribute name="NAME" x="49.265" y="48.23" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="49.265" y="48.63" size="1.016" layer="27" rot="R90"/>
+</element>
+<element name="C7" library="rcl" package="C0603K" value="9.4n" x="51.715" y="48.9" smashed="yes" rot="R90">
+<attribute name="NAME" x="51.065" y="48.1" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="53.365" y="48.1" size="1.016" layer="27" rot="R90"/>
+</element>
+<element name="C8" library="rcl" package="C0603K" value="9.4n" x="59.315" y="49.72" smashed="yes" rot="R90">
+<attribute name="NAME" x="60.865" y="48.97" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="60.965" y="48.92" size="1.016" layer="27" rot="R90"/>
+</element>
+<element name="C9" library="rcl" package="C0603K" value="4.7n" x="56.14" y="52.735" smashed="yes">
+<attribute name="NAME" x="55.34" y="53.385" size="0.8128" layer="25"/>
+<attribute name="VALUE" x="55.34" y="51.085" size="1.016" layer="27"/>
+</element>
+<element name="C10" library="rcl" package="C0603K" value="4.7n" x="54.49" y="51.215" smashed="yes" rot="R180">
+<attribute name="NAME" x="54.29" y="52.765" size="0.8128" layer="25" rot="R180"/>
+<attribute name="VALUE" x="55.29" y="52.865" size="1.016" layer="27" rot="R180"/>
+</element>
+<element name="C11" library="rcl" package="C0603K" value="4.7n" x="45.48" y="53.515" smashed="yes">
+<attribute name="NAME" x="41.83" y="53.415" size="0.8128" layer="25"/>
+<attribute name="VALUE" x="44.68" y="51.865" size="1.016" layer="27"/>
+</element>
+<element name="C12" library="rcl" package="C0603K" value="4.7n" x="43.7" y="52.235" smashed="yes" rot="R180">
+<attribute name="NAME" x="41.95" y="52.735" size="0.8128" layer="25" rot="R180"/>
+<attribute name="VALUE" x="44.5" y="53.885" size="1.016" layer="27" rot="R180"/>
+</element>
+<element name="R9" library="rcl" package="R0603" value="15k" x="42.845" y="49.94" smashed="yes" rot="R90">
+<attribute name="NAME" x="43.36" y="47.005" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="44.75" y="49.305" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="R10" library="rcl" package="R0603" value="15k" x="46.055" y="49.43" smashed="yes" rot="R90">
+<attribute name="NAME" x="45.42" y="48.795" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="47.96" y="48.795" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="R11" library="rcl" package="R0603" value="15k" x="53.455" y="48.85" smashed="yes" rot="R90">
+<attribute name="NAME" x="55.27" y="47.315" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="55.36" y="48.215" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="R12" library="rcl" package="R0603" value="15k" x="57.455" y="49.27" smashed="yes" rot="R90">
+<attribute name="NAME" x="56.82" y="48.635" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="59.36" y="48.635" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="R13" library="rcl" package="R0603" value="15k" x="41.205" y="46.69" smashed="yes" rot="R90">
+<attribute name="NAME" x="40.57" y="46.055" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="43.11" y="46.055" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="R14" library="rcl" package="R0603" value="15k" x="47.375" y="46.26" smashed="yes" rot="R90">
+<attribute name="NAME" x="46.74" y="45.625" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="49.28" y="45.625" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="R15" library="rcl" package="R0603" value="15k" x="52.975" y="45.58" smashed="yes" rot="R90">
+<attribute name="NAME" x="52.34" y="44.945" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="54.88" y="44.945" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="R16" library="rcl" package="R0603" value="15k" x="58.625" y="46.2" smashed="yes" rot="R90">
+<attribute name="NAME" x="57.99" y="45.565" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="60.53" y="45.565" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="U$12" library="ecgparts" package="SSOP-28" value="MCP3903" x="50.46" y="66.6" smashed="yes" rot="R90">
+<attribute name="NAME" x="54.66" y="67.5" size="0.8128" layer="21" font="vector" rot="R180"/>
+</element>
+<element name="R17" library="rcl" package="R0603" value="499R" x="19.32" y="34.77" smashed="yes" rot="R180">
+<attribute name="NAME" x="22.955" y="35.435" size="0.8128" layer="25" rot="R180"/>
+<attribute name="VALUE" x="19.955" y="36.675" size="1.27" layer="27" rot="R180"/>
+</element>
+<element name="R18" library="rcl" package="R0603" value="499R" x="24.785" y="35.27" smashed="yes" rot="R180">
+<attribute name="NAME" x="28.37" y="35.685" size="0.8128" layer="25" rot="R180"/>
+<attribute name="VALUE" x="25.42" y="37.175" size="1.27" layer="27" rot="R180"/>
+</element>
+<element name="R19" library="rcl" package="R0603" value="499R" x="30.75" y="34.77" smashed="yes" rot="R180">
+<attribute name="NAME" x="29.085" y="34.535" size="0.8128" layer="25" rot="R180"/>
+<attribute name="VALUE" x="31.385" y="36.675" size="1.27" layer="27" rot="R180"/>
+</element>
+<element name="R20" library="rcl" package="R0603" value="499R" x="36.465" y="34.77" smashed="yes" rot="R180">
+<attribute name="NAME" x="37.35" y="33.735" size="0.8128" layer="25" rot="R180"/>
+<attribute name="VALUE" x="37.1" y="36.675" size="1.27" layer="27" rot="R180"/>
+</element>
+<element name="R21" library="rcl" package="R0603" value="499R" x="42.18" y="34.77" smashed="yes" rot="R180">
+<attribute name="NAME" x="39.765" y="35.915" size="0.8128" layer="25" rot="R270"/>
+<attribute name="VALUE" x="42.815" y="36.675" size="1.27" layer="27" rot="R180"/>
+</element>
+<element name="R22" library="rcl" package="R0603" value="499R" x="47.895" y="34.77" smashed="yes" rot="R180">
+<attribute name="NAME" x="45.415" y="35.88" size="0.8128" layer="25" rot="R270"/>
+<attribute name="VALUE" x="48.53" y="36.675" size="1.27" layer="27" rot="R180"/>
+</element>
+<element name="R23" library="rcl" package="R0603" value="499R" x="53.61" y="34.77" smashed="yes" rot="R180">
+<attribute name="NAME" x="51.265" y="35.745" size="0.8128" layer="25" rot="R270"/>
+<attribute name="VALUE" x="54.245" y="36.675" size="1.27" layer="27" rot="R180"/>
+</element>
+<element name="R24" library="rcl" package="R0603" value="499R" x="59.325" y="35.405" smashed="yes" rot="R180">
+<attribute name="NAME" x="56.98" y="35.96" size="0.8128" layer="25" rot="R270"/>
+<attribute name="VALUE" x="59.96" y="37.31" size="1.27" layer="27" rot="R180"/>
+</element>
+<element name="C24" library="rcl" package="C0603K" value="33p" x="21.86" y="19.56" smashed="yes" rot="R180">
+<attribute name="NAME" x="25.61" y="20.11" size="0.8128" layer="25" rot="R180"/>
+<attribute name="VALUE" x="22.66" y="21.21" size="1.016" layer="27" rot="R180"/>
+</element>
+<element name="R49" library="rcl" package="R0603" value="100k" x="19.3" y="32.7" smashed="yes">
+<attribute name="NAME" x="18.565" y="30.735" size="0.8128" layer="25"/>
+<attribute name="VALUE" x="18.665" y="30.795" size="1.27" layer="27"/>
+</element>
+<element name="R50" library="rcl" package="R0603" value="100k" x="16.25" y="34.8" smashed="yes">
+<attribute name="NAME" x="14.965" y="35.985" size="0.8128" layer="25"/>
+<attribute name="VALUE" x="15.615" y="32.895" size="1.27" layer="27"/>
+</element>
+<element name="R51" library="rcl" package="R0603" value="100k" x="22.9" y="32.7" smashed="yes" rot="R90">
+<attribute name="NAME" x="22.265" y="32.065" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="24.805" y="32.065" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="R52" library="rcl" package="R0603" value="100k" x="24.95" y="32.7" smashed="yes" rot="R90">
+<attribute name="NAME" x="24.315" y="32.065" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="26.855" y="32.065" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="R53" library="rcl" package="R2512" value="100k" x="16.95" y="14.85" smashed="yes" rot="R90">
+<attribute name="NAME" x="18.095" y="14.01" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="20.125" y="12.31" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="GL1" library="led" package="LED5MM" value="GASLAMP" x="22.1" y="11.9" smashed="yes">
+<attribute name="NAME" x="21.075" y="13.2334" size="0.8128" layer="25" ratio="10"/>
+<attribute name="VALUE" x="25.3004" y="10.0966" size="1.27" layer="27" ratio="10"/>
+</element>
+<element name="R54" library="varistor" package="CT/CN1812" value="GASDISCHARGE" x="21.8" y="16.95" smashed="yes">
+<attribute name="NAME" x="20.9" y="15.95" size="0.8128" layer="25"/>
+<attribute name="VALUE" x="19.3" y="13.45" size="1.27" layer="27"/>
+</element>
+<element name="U$13" library="ecgparts" package="SMA" value="SMAZ5V1" x="23" y="23.75" smashed="yes" rot="R270">
+<attribute name="NAME" x="23.1" y="29.8" size="0.8128" layer="21" rot="R270"/>
+</element>
+<element name="U$14" library="ecgparts" package="SMA" value="SMAZ5V1" x="16.75" y="23.75" smashed="yes" rot="R90">
+<attribute name="NAME" x="15" y="20.75" size="0.8128" layer="21" rot="R90"/>
+</element>
+<element name="R55" library="rcl" package="R2010" value="10k" x="19.9" y="23.8" smashed="yes" rot="R90">
+<attribute name="NAME" x="19.995" y="22.875" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="23.075" y="20.625" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="C17" library="rcl" package="C0603K" value="33p" x="32.6" y="20" smashed="yes" rot="R180">
+<attribute name="NAME" x="36.75" y="20.25" size="0.8128" layer="25" rot="R180"/>
+<attribute name="VALUE" x="33.4" y="21.65" size="1.016" layer="27" rot="R180"/>
+</element>
+<element name="R25" library="rcl" package="R2512" value="100k" x="27.35" y="14.8" smashed="yes" rot="R90">
+<attribute name="NAME" x="26.845" y="13.71" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="30.525" y="12.26" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="GL2" library="led" package="LED5MM" value="GASLAMP" x="32.8" y="12.5" smashed="yes">
+<attribute name="NAME" x="31.975" y="13.7834" size="0.8128" layer="25" ratio="10"/>
+<attribute name="VALUE" x="36.0004" y="10.6966" size="1.27" layer="27" ratio="10"/>
+</element>
+<element name="R26" library="varistor" package="CT/CN1812" value="GASDISCHARGE" x="32.6" y="17.45" smashed="yes">
+<attribute name="NAME" x="31.6" y="15.95" size="0.8128" layer="25"/>
+<attribute name="VALUE" x="30.1" y="13.95" size="1.27" layer="27"/>
+</element>
+<element name="U$15" library="ecgparts" package="SMA" value="SMAZ5V1" x="33.75" y="23.9" smashed="yes" rot="R270">
+<attribute name="NAME" x="32.8" y="29.95" size="0.8128" layer="21" rot="R270"/>
+</element>
+<element name="U$16" library="ecgparts" package="SMA" value="SMAZ5V1" x="27.25" y="24" smashed="yes" rot="R90">
+<attribute name="NAME" x="28.3" y="27.5" size="0.8128" layer="21" rot="R90"/>
+</element>
+<element name="R27" library="rcl" package="R2010" value="10k" x="30.45" y="24.1" smashed="yes" rot="R90">
+<attribute name="NAME" x="30.195" y="23.075" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="33.625" y="20.925" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="C18" library="rcl" package="C0603K" value="33p" x="43.35" y="21.35" smashed="yes" rot="R180">
+<attribute name="NAME" x="47.15" y="21.75" size="0.8128" layer="25" rot="R180"/>
+<attribute name="VALUE" x="44.15" y="23" size="1.016" layer="27" rot="R180"/>
+</element>
+<element name="R28" library="rcl" package="R2512" value="100k" x="38.25" y="15.15" smashed="yes" rot="R90">
+<attribute name="NAME" x="39.795" y="14.01" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="41.425" y="12.61" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="GL3" library="led" package="LED5MM" value="GASLAMP" x="43.8" y="12.6" smashed="yes">
+<attribute name="NAME" x="42.825" y="13.8334" size="0.8128" layer="25" ratio="10"/>
+<attribute name="VALUE" x="47.0004" y="10.7966" size="1.27" layer="27" ratio="10"/>
+</element>
+<element name="R29" library="varistor" package="CT/CN1812" value="GASDISCHARGE" x="43.45" y="18.75" smashed="yes">
+<attribute name="NAME" x="42.55" y="17.3" size="0.8128" layer="25"/>
+<attribute name="VALUE" x="40.95" y="15.25" size="1.27" layer="27"/>
+</element>
+<element name="U$17" library="ecgparts" package="SMA" value="SMAZ5V1" x="44.75" y="25.9" smashed="yes" rot="R270">
+<attribute name="NAME" x="45.5" y="31.95" size="0.8128" layer="21" rot="R270"/>
+</element>
+<element name="U$18" library="ecgparts" package="SMA" value="SMAZ5V1" x="38" y="25" smashed="yes" rot="R90">
+<attribute name="NAME" x="36.4" y="27.1" size="0.8128" layer="21" rot="R90"/>
+</element>
+<element name="R30" library="rcl" package="R2010" value="10k" x="41.35" y="25.95" smashed="yes" rot="R90">
+<attribute name="NAME" x="40.845" y="24.775" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="44.525" y="22.775" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="C19" library="rcl" package="C0603K" value="33p" x="53.5" y="21.35" smashed="yes" rot="R180">
+<attribute name="NAME" x="57.2" y="21.75" size="0.8128" layer="25" rot="R180"/>
+<attribute name="VALUE" x="54.3" y="23" size="1.016" layer="27" rot="R180"/>
+</element>
+<element name="R31" library="rcl" package="R2512" value="100k" x="48.6" y="14.85" smashed="yes" rot="R90">
+<attribute name="NAME" x="48.495" y="13.71" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="51.775" y="12.31" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="GL4" library="led" package="LED5MM" value="GASLAMP" x="54.05" y="12.75" smashed="yes">
+<attribute name="NAME" x="53.125" y="14.0334" size="0.8128" layer="25" ratio="10"/>
+<attribute name="VALUE" x="57.2504" y="10.9466" size="1.27" layer="27" ratio="10"/>
+</element>
+<element name="R32" library="varistor" package="CT/CN1812" value="GASDISCHARGE" x="53.55" y="18.65" smashed="yes">
+<attribute name="NAME" x="52.65" y="17.15" size="0.8128" layer="25"/>
+<attribute name="VALUE" x="51.05" y="15.15" size="1.27" layer="27"/>
+</element>
+<element name="U$19" library="ecgparts" package="SMA" value="SMAZ5V1" x="54.8" y="26.15" smashed="yes" rot="R270">
+<attribute name="NAME" x="53" y="29.75" size="0.8128" layer="21"/>
+</element>
+<element name="U$20" library="ecgparts" package="SMA" value="SMAZ5V1" x="48.05" y="25.75" smashed="yes" rot="R90">
+<attribute name="NAME" x="49.4" y="29.9" size="0.8128" layer="21" rot="R180"/>
+</element>
+<element name="R33" library="rcl" package="R2010" value="10k" x="51.45" y="25.9" smashed="yes" rot="R90">
+<attribute name="NAME" x="50.995" y="24.925" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="54.625" y="22.725" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="C20" library="rcl" package="C0603K" value="33p" x="63.95" y="20.8" smashed="yes" rot="R180">
+<attribute name="NAME" x="67.65" y="21.1" size="0.8128" layer="25" rot="R180"/>
+<attribute name="VALUE" x="64.75" y="22.45" size="1.016" layer="27" rot="R180"/>
+</element>
+<element name="R34" library="rcl" package="R2512" value="100k" x="58.95" y="14.75" smashed="yes" rot="R90">
+<attribute name="NAME" x="58.695" y="13.96" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="62.125" y="12.21" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="GL5" library="led" package="LED5MM" value="GASLAMP" x="64.2" y="12.3" smashed="yes">
+<attribute name="NAME" x="63.275" y="13.4834" size="0.8128" layer="25" ratio="10"/>
+<attribute name="VALUE" x="67.4004" y="10.4966" size="1.27" layer="27" ratio="10"/>
+</element>
+<element name="R35" library="varistor" package="CT/CN1812" value="GASDISCHARGE" x="64.05" y="18.2" smashed="yes">
+<attribute name="NAME" x="63.1" y="17.05" size="0.8128" layer="25"/>
+<attribute name="VALUE" x="61.55" y="14.7" size="1.27" layer="27"/>
+</element>
+<element name="U$21" library="ecgparts" package="SMA" value="SMAZ5V1" x="65.3" y="25.35" smashed="yes" rot="R270">
+<attribute name="NAME" x="64.95" y="31.65" size="0.8128" layer="21" rot="R270"/>
+</element>
+<element name="U$22" library="ecgparts" package="SMA" value="SMAZ5V1" x="58.4" y="25.3" smashed="yes" rot="R90">
+<attribute name="NAME" x="59.55" y="28.6" size="0.8128" layer="21" rot="R90"/>
+</element>
+<element name="R36" library="rcl" package="R2010" value="10k" x="61.55" y="25.1" smashed="yes" rot="R90">
+<attribute name="NAME" x="61.295" y="24.175" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="64.725" y="21.925" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="C21" library="rcl" package="C0603K" value="33p" x="74.25" y="20.45" smashed="yes" rot="R180">
+<attribute name="NAME" x="77.95" y="20.85" size="0.8128" layer="25" rot="R180"/>
+<attribute name="VALUE" x="75.05" y="22.1" size="1.016" layer="27" rot="R180"/>
+</element>
+<element name="R37" library="rcl" package="R2512" value="100k" x="69.3" y="14.95" smashed="yes" rot="R90">
+<attribute name="NAME" x="69.095" y="14.01" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="72.475" y="12.41" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="GL6" library="led" package="LED5MM" value="GASLAMP" x="74.7" y="12.1" smashed="yes">
+<attribute name="NAME" x="73.725" y="13.4834" size="0.8128" layer="25" ratio="10"/>
+<attribute name="VALUE" x="77.9004" y="10.2966" size="1.27" layer="27" ratio="10"/>
+</element>
+<element name="R38" library="varistor" package="CT/CN1812" value="GASDISCHARGE" x="74.25" y="17.8" smashed="yes">
+<attribute name="NAME" x="73.25" y="16.8" size="0.8128" layer="25"/>
+<attribute name="VALUE" x="71.75" y="14.3" size="1.27" layer="27"/>
+</element>
+<element name="U$23" library="ecgparts" package="SMA" value="SMAZ5V1" x="74.8" y="24.7" smashed="yes" rot="R270">
+<attribute name="NAME" x="74.35" y="31.15" size="0.8128" layer="21" rot="R270"/>
+</element>
+<element name="U$24" library="ecgparts" package="SMA" value="SMAZ5V1" x="68.5" y="24.9" smashed="yes" rot="R90">
+<attribute name="NAME" x="68.45" y="28.8" size="0.8128" layer="21" rot="R90"/>
+</element>
+<element name="R39" library="rcl" package="R2010" value="10k" x="71.7" y="24.85" smashed="yes" rot="R90">
+<attribute name="NAME" x="71.645" y="23.725" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="74.875" y="21.675" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="C22" library="rcl" package="C0603K" value="33p" x="85.25" y="19.75" smashed="yes" rot="R180">
+<attribute name="NAME" x="88.9" y="20.25" size="0.8128" layer="25" rot="R180"/>
+<attribute name="VALUE" x="86.05" y="21.4" size="1.016" layer="27" rot="R180"/>
+</element>
+<element name="R40" library="rcl" package="R2512" value="100k" x="79.8" y="15.25" smashed="yes" rot="R90">
+<attribute name="NAME" x="79.195" y="14.21" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="82.975" y="12.71" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="GL7" library="led" package="LED5MM" value="GASLAMP" x="85.5" y="11.75" smashed="yes">
+<attribute name="NAME" x="84.475" y="12.8834" size="0.8128" layer="25" ratio="10"/>
+<attribute name="VALUE" x="88.7004" y="9.9466" size="1.27" layer="27" ratio="10"/>
+</element>
+<element name="R41" library="varistor" package="CT/CN1812" value="GASDISCHARGE" x="85.15" y="17.15" smashed="yes">
+<attribute name="NAME" x="84.2" y="15.95" size="0.8128" layer="25"/>
+<attribute name="VALUE" x="82.65" y="13.65" size="1.27" layer="27"/>
+</element>
+<element name="U$25" library="ecgparts" package="SMA" value="SMAZ5V1" x="84.65" y="24.3" smashed="yes" rot="R270">
+<attribute name="NAME" x="84.45" y="30.75" size="0.8128" layer="21" rot="R270"/>
+</element>
+<element name="U$26" library="ecgparts" package="SMA" value="SMAZ5V1" x="78.05" y="24.5" smashed="yes" rot="R90">
+<attribute name="NAME" x="78.1" y="28.8" size="0.8128" layer="21" rot="R90"/>
+</element>
+<element name="R42" library="rcl" package="R2010" value="10k" x="81.3" y="24.5" smashed="yes" rot="R90">
+<attribute name="NAME" x="80.845" y="23.525" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="84.475" y="21.325" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="C23" library="rcl" package="C0603K" value="33p" x="95.15" y="20.5" smashed="yes" rot="R180">
+<attribute name="NAME" x="93.5" y="21.15" size="0.8128" layer="25" rot="R180"/>
+<attribute name="VALUE" x="95.95" y="22.15" size="1.016" layer="27" rot="R180"/>
+</element>
+<element name="R43" library="rcl" package="R2512" value="100k" x="90.2" y="14.65" smashed="yes" rot="R90">
+<attribute name="NAME" x="89.595" y="13.91" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="93.375" y="12.11" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="GL8" library="led" package="LED5MM" value="GASLAMP" x="96.35" y="12.6" smashed="yes">
+<attribute name="NAME" x="95.825" y="13.7334" size="0.8128" layer="25" ratio="10"/>
+<attribute name="VALUE" x="99.5504" y="10.7966" size="1.27" layer="27" ratio="10"/>
+</element>
+<element name="R44" library="varistor" package="CT/CN1812" value="GASDISCHARGE" x="95.75" y="17.75" smashed="yes">
+<attribute name="NAME" x="94.75" y="16.25" size="0.8128" layer="25"/>
+<attribute name="VALUE" x="93.25" y="14.25" size="1.27" layer="27"/>
+</element>
+<element name="U$27" library="ecgparts" package="SMA" value="SMAZ5V1" x="95.75" y="26.1" smashed="yes" rot="R270">
+<attribute name="NAME" x="97.5" y="29.1" size="0.8128" layer="21" rot="R270"/>
+</element>
+<element name="U$28" library="ecgparts" package="SMA" value="SMAZ5V1" x="89.15" y="26.15" smashed="yes" rot="R90">
+<attribute name="NAME" x="89.5" y="30" size="0.8128" layer="21" rot="R90"/>
+</element>
+<element name="R45" library="rcl" package="R2010" value="10k" x="92.5" y="26" smashed="yes" rot="R90">
+<attribute name="NAME" x="92.245" y="24.925" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="95.675" y="22.825" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="U$29" library="ecgparts" package="TSSOP-14" value="OPA4171" x="10.2" y="35.45" smashed="yes" rot="R180">
+<attribute name="NAME" x="8.65" y="37.7" size="0.8128" layer="21" font="vector" rot="R270"/>
+</element>
+<element name="R46" library="rcl" package="R0603" value="10k" x="10.05" y="39.1" smashed="yes" rot="R180">
+<attribute name="NAME" x="14.185" y="39.515" size="0.8128" layer="25" rot="R180"/>
+<attribute name="VALUE" x="10.685" y="41.005" size="1.27" layer="27" rot="R180"/>
+</element>
+<element name="R47" library="rcl" package="R0603" value="390k" x="5.45" y="38.8" smashed="yes" rot="R180">
+<attribute name="NAME" x="3.885" y="39.315" size="0.8128" layer="25" rot="R180"/>
+<attribute name="VALUE" x="6.085" y="40.705" size="1.27" layer="27" rot="R180"/>
+</element>
+<element name="R48" library="rcl" package="R0603" value="390k" x="4.1" y="36.2" smashed="yes" rot="R270">
+<attribute name="NAME" x="4.735" y="36.835" size="0.8128" layer="25" rot="R270"/>
+<attribute name="VALUE" x="2.195" y="36.835" size="1.27" layer="27" rot="R270"/>
+</element>
+<element name="C25" library="rcl" package="C0603K" value="47p" x="5.5" y="40.45" smashed="yes" rot="R180">
+<attribute name="NAME" x="5.45" y="42.4" size="0.8128" layer="25" rot="R180"/>
+<attribute name="VALUE" x="6.3" y="42.1" size="1.016" layer="27" rot="R180"/>
+</element>
+<element name="R56" library="rcl" package="R2512" value="100k" x="5.85" y="15.1" smashed="yes" rot="R90">
+<attribute name="NAME" x="4.945" y="14.01" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="9.025" y="12.56" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="GL9" library="led" package="LED5MM" value="GASLAMP" x="11.1" y="12.75" smashed="yes">
+<attribute name="NAME" x="10.325" y="13.8834" size="0.8128" layer="25" ratio="10"/>
+<attribute name="VALUE" x="14.3004" y="10.9466" size="1.27" layer="27" ratio="10"/>
+</element>
+<element name="R57" library="varistor" package="CT/CN1812" value="GASDISCHARGE" x="10.85" y="18.1" smashed="yes">
+<attribute name="NAME" x="11.15" y="17.15" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="8.35" y="14.6" size="1.27" layer="27"/>
+</element>
+<element name="U$30" library="ecgparts" package="SMA" value="SMAZ5V1" x="11.5" y="24.15" smashed="yes" rot="R270">
+<attribute name="NAME" x="13.25" y="27.15" size="0.8128" layer="21" rot="R270"/>
+</element>
+<element name="U$31" library="ecgparts" package="SMA" value="SMAZ5V1" x="4.85" y="24.4" smashed="yes" rot="R90">
+<attribute name="NAME" x="3.1" y="21.4" size="0.8128" layer="21" rot="R90"/>
+</element>
+<element name="R58" library="rcl" package="R2010" value="10k" x="8.15" y="24.25" smashed="yes" rot="R90">
+<attribute name="NAME" x="7.945" y="23.225" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="11.325" y="21.075" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="C27" library="rcl" package="C0603K" value="9.4n" x="26.9" y="50.35" smashed="yes" rot="R180">
+<attribute name="NAME" x="27.7" y="49.7" size="0.8128" layer="25" rot="R180"/>
+<attribute name="VALUE" x="27.7" y="52" size="1.016" layer="27" rot="R180"/>
+</element>
+<element name="C28" library="rcl" package="C0603K" value="0.1u" x="26.9" y="51.8" smashed="yes" rot="R180">
+<attribute name="NAME" x="30.3" y="53.25" size="0.8128" layer="25" rot="R180"/>
+<attribute name="VALUE" x="27.7" y="53.45" size="1.016" layer="27" rot="R180"/>
+</element>
+<element name="C29" library="rcl" package="C0603K" value="9.4n" x="49.75" y="51.45" smashed="yes" rot="R180">
+<attribute name="NAME" x="50.55" y="50.8" size="0.8128" layer="25" rot="R180"/>
+<attribute name="VALUE" x="50.55" y="53.1" size="1.016" layer="27" rot="R180"/>
+</element>
+<element name="C30" library="rcl" package="C0603K" value="0.1u" x="7.95" y="30.1" smashed="yes">
+<attribute name="NAME" x="9.75" y="29.9" size="0.8128" layer="25"/>
+<attribute name="VALUE" x="7.15" y="28.45" size="1.016" layer="27"/>
+</element>
+<element name="C31" library="rcl" package="C0603K" value="9.4n" x="7.95" y="28.7" smashed="yes">
+<attribute name="NAME" x="9.8" y="28.45" size="0.8128" layer="25"/>
+<attribute name="VALUE" x="7.15" y="27.05" size="1.016" layer="27"/>
+</element>
+<element name="C32" library="rcl" package="C0603K" value="0.1u" x="49.75" y="52.75" smashed="yes" rot="R180">
+<attribute name="NAME" x="53.1" y="54.1" size="0.8128" layer="25" rot="R180"/>
+<attribute name="VALUE" x="50.55" y="54.4" size="1.016" layer="27" rot="R180"/>
+</element>
+<element name="R59" library="rcl" package="R0603" value="15k" x="15.35" y="43.85" smashed="yes" rot="R270">
+<attribute name="NAME" x="15.985" y="44.485" size="0.8128" layer="25" rot="R270"/>
+<attribute name="VALUE" x="13.445" y="44.485" size="1.27" layer="27" rot="R270"/>
+</element>
+<element name="R60" library="rcl" package="R0603" value="100k" x="9.5" y="31.8" smashed="yes">
+<attribute name="NAME" x="11.265" y="31.435" size="0.8128" layer="25"/>
+<attribute name="VALUE" x="8.865" y="29.895" size="1.27" layer="27"/>
+</element>
+<element name="R61" library="rcl" package="R0603" value="15k" x="6.3" y="31.8" smashed="yes">
+<attribute name="NAME" x="2.715" y="31.485" size="0.8128" layer="25"/>
+<attribute name="VALUE" x="5.665" y="29.895" size="1.27" layer="27"/>
+</element>
+<element name="C26" library="rcl" package="C0603K" value="33p" x="21.4" y="28.85" smashed="yes" rot="R270">
+<attribute name="NAME" x="22.05" y="29.65" size="0.8128" layer="25" rot="R270"/>
+<attribute name="VALUE" x="19.75" y="29.65" size="1.016" layer="27" rot="R270"/>
+</element>
+<element name="C33" library="rcl" package="C0603K" value="33p" x="27.35" y="32.1" smashed="yes" rot="R270">
+<attribute name="NAME" x="28" y="32.9" size="0.8128" layer="25" rot="R270"/>
+<attribute name="VALUE" x="25.7" y="32.9" size="1.016" layer="27" rot="R270"/>
+</element>
+<element name="C34" library="rcl" package="C0603K" value="33p" x="33.15" y="33.5" smashed="yes" rot="R270">
+<attribute name="NAME" x="34.15" y="34.3" size="0.8128" layer="25" rot="R270"/>
+<attribute name="VALUE" x="31.5" y="34.3" size="1.016" layer="27" rot="R270"/>
+</element>
+<element name="C35" library="rcl" package="C0603K" value="33p" x="38.75" y="32.45" smashed="yes" rot="R270">
+<attribute name="NAME" x="38.45" y="30.6" size="0.8128" layer="25" rot="R270"/>
+<attribute name="VALUE" x="37.1" y="33.25" size="1.016" layer="27" rot="R270"/>
+</element>
+<element name="C36" library="rcl" package="C0603K" value="33p" x="44.5" y="33.45" smashed="yes" rot="R270">
+<attribute name="NAME" x="44.3" y="31.75" size="0.8128" layer="25" rot="R270"/>
+<attribute name="VALUE" x="42.85" y="34.25" size="1.016" layer="27" rot="R270"/>
+</element>
+<element name="C37" library="rcl" package="C0603K" value="33p" x="50.15" y="33.55" smashed="yes" rot="R270">
+<attribute name="NAME" x="50" y="31.65" size="0.8128" layer="25" rot="R270"/>
+<attribute name="VALUE" x="48.5" y="34.35" size="1.016" layer="27" rot="R270"/>
+</element>
+<element name="C38" library="rcl" package="C0603K" value="33p" x="56" y="33.75" smashed="yes" rot="R270">
+<attribute name="NAME" x="55.8" y="32.05" size="0.8128" layer="25" rot="R270"/>
+<attribute name="VALUE" x="54.35" y="34.55" size="1.016" layer="27" rot="R270"/>
+</element>
+<element name="C39" library="rcl" package="C0603K" value="33p" x="61.6" y="34.35" smashed="yes" rot="R270">
+<attribute name="NAME" x="61.55" y="32.4" size="0.8128" layer="25" rot="R270"/>
+<attribute name="VALUE" x="59.95" y="35.15" size="1.016" layer="27" rot="R270"/>
+</element>
+<element name="R62" library="rcl" package="R0603" value="10M" x="25.65" y="28.6" smashed="yes">
+<attribute name="NAME" x="25.015" y="29.235" size="0.8128" layer="25"/>
+<attribute name="VALUE" x="25.015" y="26.695" size="1.27" layer="27"/>
+</element>
+<element name="R63" library="rcl" package="R0603" value="10M" x="30.7" y="32.1" smashed="yes">
+<attribute name="NAME" x="29.815" y="30.185" size="0.8128" layer="25"/>
+<attribute name="VALUE" x="30.065" y="30.195" size="1.27" layer="27"/>
+</element>
+<element name="R64" library="rcl" package="R0603" value="10M" x="36.4" y="31.7" smashed="yes">
+<attribute name="NAME" x="35.315" y="29.985" size="0.8128" layer="25"/>
+<attribute name="VALUE" x="35.765" y="29.795" size="1.27" layer="27"/>
+</element>
+<element name="R65" library="rcl" package="R0603" value="10M" x="42.15" y="32.1" smashed="yes">
+<attribute name="NAME" x="41.315" y="30.485" size="0.8128" layer="25"/>
+<attribute name="VALUE" x="41.515" y="30.195" size="1.27" layer="27"/>
+</element>
+<element name="R66" library="rcl" package="R0603" value="10M" x="47.8" y="32.5" smashed="yes">
+<attribute name="NAME" x="47.115" y="30.685" size="0.8128" layer="25"/>
+<attribute name="VALUE" x="47.165" y="30.595" size="1.27" layer="27"/>
+</element>
+<element name="R67" library="rcl" package="R0603" value="10M" x="53.5" y="32.5" smashed="yes">
+<attribute name="NAME" x="52.565" y="30.735" size="0.8128" layer="25"/>
+<attribute name="VALUE" x="52.865" y="30.595" size="1.27" layer="27"/>
+</element>
+<element name="R68" library="rcl" package="R0603" value="10M" x="59.35" y="33.25" smashed="yes">
+<attribute name="NAME" x="60.935" y="32.065" size="0.8128" layer="25" rot="R180"/>
+<attribute name="VALUE" x="58.715" y="31.345" size="1.27" layer="27"/>
+</element>
+<element name="R69" library="rcl" package="R0603" value="10M" x="18.9" y="28.55" smashed="yes">
+<attribute name="NAME" x="18.265" y="29.185" size="0.8128" layer="25"/>
+<attribute name="VALUE" x="18.265" y="26.645" size="1.27" layer="27"/>
+</element>
+<element name="U$32" library="ecgparts" package="LQFP48" value="STM32F030C8T6" x="13.1" y="67.15" smashed="yes" rot="R90">
+<attribute name="NAME" x="16.1" y="64.15" size="0.8128" layer="21" rot="R90"/>
+</element>
+<element name="U$33" library="ecgparts" package="SOIC16W" value="SI8420BD" x="65.95" y="73.25" smashed="yes">
+<attribute name="NAME" x="62.7" y="75.5" size="0.8128" layer="21"/>
+</element>
+<element name="U$34" library="ecgparts" package="SHIELDPAD" value="SHIELDPAD" x="6.35" y="5.85" smashed="yes" rot="R90"/>
+<element name="U$35" library="ecgparts" package="SHIELDPAD" value="SHIELDPAD" x="16.9" y="5.8" smashed="yes" rot="R90"/>
+<element name="U$36" library="ecgparts" package="SHIELDPAD" value="SHIELDPAD" x="27.55" y="5.65" smashed="yes" rot="R90"/>
+<element name="U$37" library="ecgparts" package="SHIELDPAD" value="SHIELDPAD" x="37.75" y="5.75" smashed="yes" rot="R90"/>
+<element name="U$38" library="ecgparts" package="SHIELDPAD" value="SHIELDPAD" x="48.15" y="5.7" smashed="yes" rot="R90"/>
+<element name="U$39" library="ecgparts" package="SHIELDPAD" value="SHIELDPAD" x="58.85" y="5.65" smashed="yes" rot="R90"/>
+<element name="U$40" library="ecgparts" package="SHIELDPAD" value="SHIELDPAD" x="68.95" y="5.75" smashed="yes" rot="R90"/>
+<element name="U$41" library="ecgparts" package="SHIELDPAD" value="SHIELDPAD" x="79.7" y="5.8" smashed="yes" rot="R90"/>
+<element name="U$42" library="ecgparts" package="SHIELDPAD" value="SHIELDPAD" x="90.2" y="5.7" smashed="yes" rot="R90"/>
+<element name="C40" library="rcl" package="C0603K" value="33p" x="12.5" y="54.05" smashed="yes">
+<attribute name="NAME" x="11.4" y="52.35" size="0.8128" layer="25"/>
+<attribute name="VALUE" x="11.7" y="52.4" size="1.016" layer="27"/>
+</element>
+<element name="R70" library="rcl" package="R2512" value="100k" x="14.9" y="56.85" smashed="yes">
+<attribute name="NAME" x="13.56" y="55.955" size="0.8128" layer="25"/>
+<attribute name="VALUE" x="12.36" y="53.675" size="1.27" layer="27"/>
+</element>
+<element name="GL10" library="led" package="LED5MM" value="GASLAMP" x="3.95" y="46.75" smashed="yes" rot="R180">
+<attribute name="NAME" x="5.775" y="45.5666" size="0.8128" layer="25" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="0.7496" y="48.5534" size="1.27" layer="27" ratio="10" rot="R180"/>
+</element>
+<element name="R71" library="varistor" package="CT/CN1812" value="GASDISCHARGE" x="5.9" y="60.35" smashed="yes" rot="R180">
+<attribute name="NAME" x="7.4" y="59.75" size="0.8128" layer="25" rot="R180"/>
+<attribute name="VALUE" x="8.4" y="63.85" size="1.27" layer="27" rot="R180"/>
+</element>
+<element name="U$43" library="ecgparts" package="SMA" value="SMAZ5V1" x="12.55" y="43.9" smashed="yes" rot="R270">
+<attribute name="NAME" x="14.3" y="41.85" size="0.8128" layer="21" rot="R270"/>
+</element>
+<element name="U$44" library="ecgparts" package="SMA" value="SMAZ5V1" x="9.25" y="43.9" smashed="yes" rot="R270">
+<attribute name="NAME" x="7.6" y="41.35" size="0.8128" layer="21" rot="R90"/>
+</element>
+<element name="R72" library="rcl" package="R2010" value="10k" x="15.55" y="51.2" smashed="yes" rot="R270">
+<attribute name="NAME" x="14.205" y="52.275" size="0.8128" layer="25" rot="R270"/>
+<attribute name="VALUE" x="12.375" y="54.375" size="1.27" layer="27" rot="R270"/>
+</element>
+<element name="R73" library="rcl" package="R0603" value="10M" x="12.95" y="48.9" smashed="yes" rot="R270">
+<attribute name="NAME" x="11.285" y="49.985" size="0.8128" layer="25" rot="R270"/>
+<attribute name="VALUE" x="11.045" y="49.535" size="1.27" layer="27" rot="R270"/>
+</element>
+<element name="U$45" library="ecgparts" package="SHIELDPAD" value="SHIELDPAD" x="5.6" y="54.05" smashed="yes"/>
+<element name="C41" library="rcl" package="C0603K" value="33p" x="17.15" y="46.2" smashed="yes" rot="R90">
+<attribute name="NAME" x="16.5" y="45.4" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="18.8" y="45.4" size="1.016" layer="27" rot="R90"/>
+</element>
+<element name="U$46" library="ecgparts" package="PBRC-M" value="PBRC-M" x="26.95" y="72.5" smashed="yes" rot="R180"/>
+<element name="U$47" library="ecgparts" package="PBRC-M" value="PBRC-M" x="50.5" y="73.45" smashed="yes" rot="R180"/>
+<element name="U$48" library="ecgparts" package="CTX02-18714R" value="CTX02-18714R" x="67.1" y="56.75" smashed="yes" rot="R180">
+<attribute name="NAME" x="70.1" y="60.05" size="0.8128" layer="21" rot="R180"/>
+</element>
+<element name="U$49" library="ecgparts" package="SOT-323-3" value="BAT64WFILMY" x="60.5" y="57.5" smashed="yes" rot="R180">
+<attribute name="NAME" x="59.025" y="58.775" size="0.8128" layer="21" font="vector" rot="R180"/>
+</element>
+<element name="U$50" library="ecgparts" package="QFN16" value="TPS55010" x="75.9" y="58.2" smashed="yes" rot="R180"/>
+<element name="C42" library="rcl" package="C0603" value="" x="73.1" y="55.7" smashed="yes" rot="R180">
+<attribute name="NAME" x="74.085" y="54.615" size="0.8128" layer="25" rot="R180"/>
+<attribute name="VALUE" x="73.735" y="57.605" size="1.27" layer="27" rot="R180"/>
+</element>
+<element name="R74" library="rcl" package="R0603" value="" x="80.95" y="61.5" smashed="yes" rot="R180">
+<attribute name="NAME" x="81.935" y="63.365" size="0.8128" layer="25" rot="R180"/>
+<attribute name="VALUE" x="81.585" y="63.405" size="1.27" layer="27" rot="R180"/>
+</element>
+<element name="R75" library="rcl" package="R0603" value="" x="78.3" y="62.25" smashed="yes" rot="R90">
+<attribute name="NAME" x="78.715" y="64.015" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="80.205" y="61.615" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="C43" library="rcl" package="C0603" value="" x="76.25" y="62.3" smashed="yes" rot="R270">
+<attribute name="NAME" x="75.935" y="66.085" size="0.8128" layer="25" rot="R270"/>
+<attribute name="VALUE" x="74.345" y="62.935" size="1.27" layer="27" rot="R270"/>
+</element>
+<element name="C44" library="rcl" package="C0603" value="" x="72.1" y="61.6" smashed="yes" rot="R270">
+<attribute name="NAME" x="71.635" y="65.235" size="0.8128" layer="25" rot="R270"/>
+<attribute name="VALUE" x="70.195" y="62.235" size="1.27" layer="27" rot="R270"/>
+</element>
+<element name="R76" library="rcl" package="R0603" value="" x="74.2" y="61.6" smashed="yes" rot="R90">
+<attribute name="NAME" x="74.415" y="63.315" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="76.105" y="60.965" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="C45" library="rcl" package="C0603" value="" x="78.9" y="58.15" smashed="yes" rot="R270">
+<attribute name="NAME" x="78.685" y="56.435" size="0.8128" layer="25" rot="R270"/>
+<attribute name="VALUE" x="76.995" y="58.785" size="1.27" layer="27" rot="R270"/>
+</element>
+<element name="C46" library="rcl" package="C1206K" value="" x="82.95" y="58.45" smashed="yes" rot="R90">
+<attribute name="NAME" x="85.15" y="57.6" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="85.05" y="56.85" size="1.016" layer="27" rot="R90"/>
+</element>
+<element name="C47" library="rcl" package="C0603" value="" x="61.25" y="55" smashed="yes" rot="R180">
+<attribute name="NAME" x="61.885" y="54.365" size="0.8128" layer="25" rot="R180"/>
+<attribute name="VALUE" x="61.885" y="56.905" size="1.27" layer="27" rot="R180"/>
+</element>
+<element name="C48" library="rcl" package="C1206K" value="" x="60.55" y="60.5" smashed="yes">
+<attribute name="NAME" x="56.05" y="60.1" size="0.8128" layer="25"/>
+<attribute name="VALUE" x="58.95" y="58.4" size="1.016" layer="27"/>
+</element>
+<element name="C49" library="rcl" package="C1206K" value="" x="69.1" y="63.1" smashed="yes" rot="R90">
+<attribute name="NAME" x="68" y="61.5" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="71.2" y="61.5" size="1.016" layer="27" rot="R90"/>
+</element>
+<element name="C50" library="rcl" package="C0603" value="" x="67.75" y="66.65" smashed="yes">
+<attribute name="NAME" x="67.115" y="67.285" size="0.8128" layer="25"/>
+<attribute name="VALUE" x="67.115" y="64.745" size="1.27" layer="27"/>
+</element>
+<element name="C51" library="rcl" package="C0603" value="" x="21.15" y="61.15" smashed="yes" rot="R90">
+<attribute name="NAME" x="20.515" y="60.515" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="23.055" y="60.515" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="C52" library="rcl" package="C0603" value="" x="22.95" y="72.6" smashed="yes" rot="R270">
+<attribute name="NAME" x="23.585" y="73.235" size="0.8128" layer="25" rot="R270"/>
+<attribute name="VALUE" x="21.045" y="73.235" size="1.27" layer="27" rot="R270"/>
+</element>
+<element name="C53" library="rcl" package="C0603" value="" x="44.75" y="61.55" smashed="yes" rot="R90">
+<attribute name="NAME" x="44.115" y="60.915" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="46.655" y="60.915" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="C54" library="rcl" package="C0603" value="" x="46.45" y="73.15" smashed="yes" rot="R270">
+<attribute name="NAME" x="47.085" y="73.785" size="0.8128" layer="25" rot="R270"/>
+<attribute name="VALUE" x="44.545" y="73.785" size="1.27" layer="27" rot="R270"/>
+</element>
+<element name="C55" library="rcl" package="C0603" value="" x="14.65" y="60.35" smashed="yes" rot="R180">
+<attribute name="NAME" x="18.935" y="62.015" size="0.8128" layer="25" rot="R180"/>
+<attribute name="VALUE" x="15.285" y="62.255" size="1.27" layer="27" rot="R180"/>
+</element>
+<element name="C56" library="rcl" package="C0603" value="" x="7.4" y="63.4" smashed="yes" rot="R180">
+<attribute name="NAME" x="7.735" y="66.115" size="0.8128" layer="25" rot="R180"/>
+<attribute name="VALUE" x="8.035" y="65.305" size="1.27" layer="27" rot="R180"/>
+</element>
+<element name="C57" library="rcl" package="C0603" value="" x="19.85" y="70.95" smashed="yes">
+<attribute name="NAME" x="17.965" y="71.585" size="0.8128" layer="25"/>
+<attribute name="VALUE" x="19.215" y="69.045" size="1.27" layer="27"/>
+</element>
+<element name="C58" library="rcl" package="C0603" value="" x="11.15" y="60.25" smashed="yes">
+<attribute name="NAME" x="10.515" y="60.885" size="0.8128" layer="25"/>
+<attribute name="VALUE" x="10.515" y="58.345" size="1.27" layer="27"/>
+</element>
+<element name="U$51" library="ecgparts" package="TSOT23" value="CAT6219" x="60.3" y="63.45" smashed="yes" rot="R180"/>
+<element name="U$52" library="ecgparts" package="TSOT23" value="CAT6219" x="58.35" y="67.15" smashed="yes" rot="R180"/>
+<element name="C59" library="rcl" package="C0603" value="" x="63.6" y="63.9" smashed="yes">
+<attribute name="NAME" x="62.965" y="64.535" size="0.8128" layer="25"/>
+<attribute name="VALUE" x="62.965" y="61.995" size="1.27" layer="27"/>
+</element>
+<element name="C60" library="rcl" package="C0603" value="" x="61.55" y="66.15" smashed="yes">
+<attribute name="NAME" x="60.915" y="66.785" size="0.8128" layer="25"/>
+<attribute name="VALUE" x="60.915" y="64.245" size="1.27" layer="27"/>
+</element>
+<element name="C61" library="rcl" package="C0603" value="" x="59.05" y="70.3" smashed="yes" rot="R90">
+<attribute name="NAME" x="58.415" y="69.665" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="60.955" y="69.665" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="C62" library="rcl" package="C0603" value="" x="56.6" y="70.35" smashed="yes" rot="R90">
+<attribute name="NAME" x="55.965" y="69.715" size="0.8128" layer="25" rot="R90"/>
+<attribute name="VALUE" x="58.505" y="69.715" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="SV1" library="con-lsta" package="FE05-2" value="" x="6.75" y="76.35" smashed="yes" rot="R180">
 <attribute name="OC_NEWARK" value="unknown" x="6.75" y="76.35" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="" x="6.75" y="76.35" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MF" value="" x="6.75" y="76.35" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="6.75" y="76.35" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="NAME" x="9.29" y="72.921" size="0.8128" layer="25" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="13.1" y="81.049" size="1.27" layer="27" ratio="10" rot="R180"/>
 </element>
-<element name="SV2" library="con-lstb" package="MA04-1" value="" x="77.5" y="73.8" rot="R270">
+<element name="SV2" library="con-lstb" package="MA04-1" value="" x="77.5" y="73.8" smashed="yes" rot="R270">
 <attribute name="OC_NEWARK" value="unknown" x="77.5" y="73.8" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="" x="77.5" y="73.8" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MF" value="" x="77.5" y="73.8" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="77.5" y="73.8" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="NAME" x="79.151" y="78.88" size="1.27" layer="25" ratio="10" rot="R270"/>
+<attribute name="VALUE" x="79.151" y="73.165" size="1.27" layer="27" ratio="10" rot="R270"/>
 </element>
-<element name="R77" library="rcl" package="R0603" value="10k" x="1.55" y="64.55" rot="R270"/>
-<element name="R78" library="rcl" package="R0603" value="15k" x="21.35" y="45.7"/>
+<element name="R77" library="rcl" package="R0603" value="10k" x="1.55" y="64.55" smashed="yes" rot="R270">
+<attribute name="NAME" x="2.885" y="65.785" size="0.8128" layer="25" rot="R270"/>
+<attribute name="VALUE" x="-0.355" y="65.185" size="1.27" layer="27" rot="R270"/>
+</element>
+<element name="R78" library="rcl" package="R0603" value="15k" x="21.35" y="45.7" smashed="yes">
+<attribute name="NAME" x="20.615" y="43.935" size="0.8128" layer="25"/>
+<attribute name="VALUE" x="20.715" y="43.795" size="1.27" layer="27"/>
+</element>
 </elements>
 <signals>
 <signal name="N$1">
@@ -3341,6 +3879,8 @@ design rules under a new name.</description>
 <via x="6.3" y="70.45" extent="1-16" drill="0.6"/>
 <via x="8.75" y="71.95" extent="1-16" drill="0.6"/>
 <via x="23.9" y="60.2" extent="1-16" drill="0.6"/>
+<via x="3.1" y="69.55" extent="1-16" drill="0.6"/>
+<via x="17.8" y="71.7" extent="1-16" drill="0.6"/>
 </signal>
 <signal name="N$24">
 <contactref element="U$1" pad="P$1"/>
@@ -4563,4 +5103,10 @@ design rules under a new name.</description>
 </errors>
 </board>
 </drawing>
+<compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
+</compatibility>
 </eagle>
