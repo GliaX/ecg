@@ -1,0 +1,65 @@
+ECG notes:
+
+Part number for MCU: STM32F030C8T6
+
+The QFN could use a slightly smaller stencil center pad.
+
+Vpri has been set to 1.18V, resulting in a pre-diode voltage of 4.74V - that can't be right.
+Pre-diode voltage should be exactly 6V if possible.
+
+Set the RHS and RLS to different values: RLS to 6.8k and RHS to 6.04k. -> resulting in vpri of 1.56V and pre-diode voltage of 6.26V.
+The resulting post-diode voltage is, depending on load, between 6.02V and 5.36V, within the parameters of the LDO regulator.
+
+Reworking board to match. Measuring after, transients look excellent, might be worth doubling up on the bulk caps post diode and after each LDO.
+Voltages are spot-on.
+
+Missing reset pin on MCU - bring out to connector.
+
+Current draw on startup - 80mA at 5V- yay!
+
+Pin map:
+
+ADC A:
+PB0 - nRESET
+PA7 - SDI (MOSI) (SPI1/AF0)
+PA6 - SDO (MISO) (SPI1/AF0)
+PA5 - SCK (SPI1/AF0)
+PA4 - SS (SPI1/AF0)
+PA2 - DRA
+PA3 - DRB
+
+ADC B:
+PB10 - nRESET 
+PB15 - SDI (MOSI) (SPI2/AF0)
+PB14 - SDO (MISO) (SPI2/AF0)
+PB13 - SCK (SPI2/AF0)
+PB12 - SS (SPI2/AF0)
+PB11 - DRA
+PB2 - DRB
+
+OUTPUT: 
+PA8 - CLOCK (USART1/AF1)
+PA9 - DATA (USART1/AF1)
+
+DEBUG:
+PA13 - SWDIO (AF0)
+PA14 - SWCLK (AF0)
+PF6 - SCL (I2C2/AF?)
+PF7 - SDA (I2C2/AF?)
+PA10 - RX (USART1/AF1)
+PA9 - TX/DATA (USART1/AF1)
+
+COMMON: 
+PB1/A9
+
+SHIELD:
+PB9 (TIM17_CH1/AF2)
+
+Issues:
+
+The board doesn't work as designed.
+Zeners are conducting - pulling everything to 2.5V - need higher voltage zeners.
+Pulling averages off the gain resistors won't work - needs to be on the inputs themselves, possibly buffered.
+To get a unipolar negative, we need a wilson terminal between LL, RA and LA -buffering LL won't work.
+
+
