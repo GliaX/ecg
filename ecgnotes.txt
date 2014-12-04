@@ -62,4 +62,35 @@ Zeners are conducting - pulling everything to 2.5V - need higher voltage zeners.
 Pulling averages off the gain resistors won't work - needs to be on the inputs themselves, possibly buffered.
 To get a unipolar negative, we need a wilson terminal between LL, RA and LA -buffering LL won't work.
 
+Spencer and I (Kliment) decided to try two approaches:
+
+Spencer will try to build a 5-lead ECG with the current AFE components using a Wilson terminal
+I will build a proto based on an integrated AFE setup using the TI ADS1198 IC. This is pin-compatible with the higher-resolution 1298.
+
+For some reason, the ADS1198 evaluation kit has the leads in an odd order:
+ V6 on channel 1, LA-RA on channel 2, LL-RA on channel 3, V2-5 on chans 4-7, V1 on chan 8. Looks to be for connector pinout reasons.
+ 
+Will skip that and place LA-RA and LL-RA on chans 1 and 2 and v1-6 on chans 3-8
+
+The negatives of all channels except 1 and 2 are connected to WCT.
+The negatives of channels 1 and 2 are connected to each other and to RA.
+
+C1P is connected to LA.
+C2P is connected to LL.
+
+Initial schematic and layout, reusing the power supply circuit from the previous revision.
+
+Bringing out nRESET this time, to a jumper
+
+Connector for programming has 5V, 3.3V, GND, SWDIO and SWDCLK
+
+Need to decide what to do with last pin
+
+Maybe put LEDs on top of MCU?
+
+Decision needs to be made on defib protection.
+RLD is driven as on figure 50 of datasheet. 
+Use same signal (RLD) buffered for shield. Inverted or not?
+
+
 
