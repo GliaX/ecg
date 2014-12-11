@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="1.27" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
@@ -538,6 +538,32 @@
 <text x="-7" y="4.25" size="0.8128" layer="21" ratio="16">1</text>
 <text x="-4.25" y="2" size="1.6764" layer="25" ratio="16">&gt;NAME</text>
 </package>
+<package name="GDT">
+<pad name="P$1" x="-1.27" y="0" drill="0.8" shape="square"/>
+<pad name="P$2" x="1.27" y="0" drill="0.8" shape="square"/>
+</package>
+<package name="TI-DPY">
+<smd name="P$1" x="-0.5" y="0" dx="0.6" dy="0.5" layer="1"/>
+<smd name="P$2" x="0.5" y="0" dx="0.6" dy="0.5" layer="1"/>
+<wire x1="-1" y1="0.5" x2="-1" y2="-0.5" width="0.127" layer="21"/>
+<wire x1="-1" y1="-0.5" x2="1" y2="-0.5" width="0.1" layer="21"/>
+<wire x1="1" y1="-0.5" x2="1" y2="0.5" width="0.1" layer="21"/>
+<wire x1="1" y1="0.5" x2="-1" y2="0.5" width="0.1" layer="21"/>
+<wire x1="-1" y1="0.5" x2="-1.5" y2="0.5" width="0.1" layer="21"/>
+</package>
+<package name="SOT-23-5">
+<smd name="P$1" x="-1.2" y="0.95" dx="1" dy="0.7" layer="1"/>
+<smd name="P$2" x="-1.2" y="0" dx="1" dy="0.7" layer="1"/>
+<smd name="P$3" x="-1.2" y="-0.95" dx="1" dy="0.7" layer="1"/>
+<smd name="P$4" x="1.2" y="-0.95" dx="1" dy="0.7" layer="1"/>
+<smd name="P$5" x="1.2" y="0.95" dx="1" dy="0.7" layer="1"/>
+<wire x1="-0.5" y1="1.45" x2="0.5" y2="1.45" width="0.127" layer="21"/>
+<wire x1="0.5" y1="1.45" x2="0.5" y2="-1.45" width="0.127" layer="21"/>
+<wire x1="0.5" y1="-1.45" x2="-0.5" y2="-1.45" width="0.127" layer="21"/>
+<wire x1="-0.5" y1="-1.45" x2="-0.5" y2="1.45" width="0.127" layer="21"/>
+<circle x="-0.65" y="1.7" radius="0.14141875" width="0.127" layer="21"/>
+<text x="0.3" y="-1.35" size="0.6096" layer="21" font="vector" ratio="21" rot="R90">&gt;NAME</text>
+</package>
 </packages>
 <symbols>
 <symbol name="MCP3903">
@@ -881,6 +907,31 @@
 <wire x1="27.94" y1="35.56" x2="27.94" y2="-33.02" width="0.254" layer="94"/>
 <wire x1="27.94" y1="-33.02" x2="-33.02" y2="-33.02" width="0.254" layer="94"/>
 <wire x1="-33.02" y1="-33.02" x2="-33.02" y2="35.56" width="0.254" layer="94"/>
+</symbol>
+<symbol name="GDT">
+<pin name="P$1" x="-2.54" y="-5.08" length="middle" rot="R90"/>
+<pin name="P$2" x="2.54" y="-5.08" length="middle" rot="R90"/>
+<wire x1="-2.54" y1="0" x2="-2.54" y2="7.62" width="0.254" layer="94"/>
+<wire x1="2.54" y1="0" x2="2.54" y2="7.62" width="0.254" layer="94"/>
+<circle x="0" y="2.54" radius="5.6796125" width="0.254" layer="94"/>
+</symbol>
+<symbol name="TPD1E05U06">
+<pin name="S" x="-7.62" y="2.54" length="middle"/>
+<pin name="G" x="-7.62" y="0" length="middle"/>
+<wire x1="-2.54" y1="5.08" x2="5.08" y2="5.08" width="0.254" layer="94"/>
+<wire x1="5.08" y1="5.08" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-2.54" x2="-2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-2.54" x2="-2.54" y2="5.08" width="0.254" layer="94"/>
+</symbol>
+<symbol name="MCP6001T-I/OT">
+<pin name="I+" x="-7.62" y="5.08" length="middle"/>
+<pin name="I-" x="-7.62" y="-5.08" length="middle"/>
+<pin name="V-" x="2.54" y="-10.16" length="middle" rot="R90"/>
+<pin name="V+" x="2.54" y="10.16" length="middle" rot="R270"/>
+<pin name="O" x="12.7" y="0" length="middle" rot="R180"/>
+<wire x1="-2.54" y1="10.16" x2="-2.54" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-10.16" x2="7.62" y2="0" width="0.254" layer="94"/>
+<wire x1="7.62" y1="0" x2="-2.54" y2="10.16" width="0.254" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -1292,6 +1343,57 @@
 <connect gate="G$1" pin="VREFN" pad="P$25"/>
 <connect gate="G$1" pin="VREFP" pad="P$24"/>
 <connect gate="G$1" pin="WCT" pad="P$64"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="GDT">
+<gates>
+<gate name="G$1" symbol="GDT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="GDT">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+<connect gate="G$1" pin="P$2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TPD1E05U06">
+<gates>
+<gate name="G$1" symbol="TPD1E05U06" x="2.54" y="-2.54"/>
+</gates>
+<devices>
+<device name="" package="TI-DPY">
+<connects>
+<connect gate="G$1" pin="G" pad="P$2"/>
+<connect gate="G$1" pin="S" pad="P$1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="MCP6001T-I/OT">
+<gates>
+<gate name="G$1" symbol="MCP6001T-I/OT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOT-23-5">
+<connects>
+<connect gate="G$1" pin="I+" pad="P$3"/>
+<connect gate="G$1" pin="I-" pad="P$4"/>
+<connect gate="G$1" pin="O" pad="P$1"/>
+<connect gate="G$1" pin="V+" pad="P$5"/>
+<connect gate="G$1" pin="V-" pad="P$2"/>
 </connects>
 <technologies>
 <technology name=""/>
