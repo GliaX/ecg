@@ -2,6 +2,7 @@
 
 ## General architecture
 ![block_diagram](https://user-images.githubusercontent.com/14543226/29610835-bf5f1dde-87fb-11e7-89b6-b82ff8398bde.gif)
+
 Figure 1: Block diagram of ECG device architecture. Not all components are neccessary.
 
 A comparison has been done between three OS ECG devices: MobilECG, GammaCardion, Olimex
@@ -12,5 +13,5 @@ Here are very brief summaries on all three devices, listed in the order of most 
 
 <b> Olimex </b> is not a full ECG device per se, rather it's an Arduino shield containing the AFE hardware. The digital part is then done on Arduino. It is a platform for a 5-lead ECG. The only way we could use it is by stacking them up which certainly has drawbacks. It's a solution, but it's not the preferred one.
 
-<b> GammaCardio </b> is used with a PC. A design of this device is rather old and is not up to current standards. I do not recommend spending much time with it. The most interesting par of it is that it has the CE certificate.
+<b> GammaCardio </b> is used with a PC. A design of this device is rather old and is not up to current standards. I do not recommend spending much time with it. The most interesting part of it is that it has the CE certificate.
 
