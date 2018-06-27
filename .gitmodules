@@ -1,3 +1,12 @@
 [submodule "Firmware"]
 	path = Firmware
 	url = https://github.com/IRNAS/gliax-ecg-firmware.git
+[submodule "Simulator"]
+	path = Simulator
+	url = https://github.com/IRNAS/gliax-ecg-simulation-firmware.git
+[submodule "Hardware"]
+	path = Hardware
+	url = https://github.com/IRNAS/gliax-ecg-hardware.git
+[submodule "application_android"]
+	path = application_android
+	url = https://github.com/IRNAS/gliax-ecg-android-application.git
