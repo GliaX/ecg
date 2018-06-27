@@ -1,3 +1,3 @@
-[submodule "firmware/libopencm3"]
-	path = firmware/libopencm3
-	url = https://github.com/libopencm3/libopencm3
+[submodule "Firmware"]
+	path = Firmware
+	url = https://github.com/IRNAS/gliax-ecg-firmware.git
